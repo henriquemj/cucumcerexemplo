@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.Before;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Quando;
+import pages.HomePage;
 import io.cucumber.java.pt.Então;
 
 public class StepsAmazon {
@@ -27,15 +28,15 @@ public class StepsAmazon {
 	}
 
 	@Quando("fizer a busca pelo produto: {string}")
-	public void fizer_a_busca_pelo_produto(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void fizer_a_busca_pelo_produto(String produto) {
+	    
+		HomePage homePage = new HomePage(driver);
+		homePage.realizaBusca(produto);
 	}
 
 	@Então("vou verificar se o valor está acima de {string}")
 	public void vou_verificar_se_o_valor_está_acima_de(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	
 	}
 
 }
