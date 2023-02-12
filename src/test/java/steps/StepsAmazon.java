@@ -22,9 +22,8 @@ public class StepsAmazon {
 	}
 	
 	@Dado("que esteja na pagina: {string}")
-	public void que_esteja_na_pagina(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void que_esteja_na_pagina(String url) {
+	    driver.get(url);
 	}
 
 	@Quando("fizer a busca pelo produto: {string}")
